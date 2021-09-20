@@ -1,3 +1,7 @@
 # Video: Client Configuration
 
 <iframe src="https://player.vimeo.com/video/606739492/?title=0&byline=0&portrait=0" width="640" height="360" allowfullscreen="allowfullscreen" allow="autoplay; fullscreen; picture-in-picture"></iframe>
+
+## Resources
+
+- [Create React App: Proxying Requests](https://create-react-app.dev/docs/proxying-api-requests-in-development/)
