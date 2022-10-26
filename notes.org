@@ -1,0 +1,32 @@
+* Notes
+I started this video by creating a React app with the following command within the 'flatiron-theater' directory:
+#+begin_src bash
+npx create create-react-app client --use-npm
+#+end_src
+
+I then received this error:
+#+begin_src bash
+npm could not determine executable to run
+#+end_src
+
+I then did some research and found this StackOverflow post on the topic:
+- https://stackoverflow.com/questions/67833794/npm-err-could-not-determine-executable-to-run
+
+Following one of the suggestions from that StackOverflow post, I ran the following 'rm' command:
+#+begin_src bash
+samuelbanya@Samuels-MBP ~/hub/Development/code/phase-4/phase-4-lecture-videos-client-configuration/flatiron-theater $ rm -rf .git/hooks
+#+end_src
+
+I did some more research, and found these GitHub issues pages:
+- https://github.com/nodejs/help/issues/2874#issuecomment-663661148
+- https://github.com/facebook/create-react-app/issues/12423
+
+I then tried using the 'npm cache clean --force' option to clear my cache:
+#+begin_src bash
+samuelbanya@Samuels-MBP ~/hub/Development/code/phase-4/phase-4-lecture-videos-client-configuration/flatiron-theater $ npm cache clean --force
+npm WARN using --force Recommended protections disabled.
+#+end_src
+
+<2022-10-25 Tue 18:59>: I still have no idea how to fix the issue, so I just noted that they changed the 'package.json' manifest file's 'proxy' setting value to 'http://localhost:3000', and they changed the 'scripts' block's 'start' key value to 'PORT=4000 react-scripts start'
+
+They handled the server with 'rails s' command, and ran the frontend with the 'npm start --prefix client' command.
